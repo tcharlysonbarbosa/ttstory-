@@ -123,7 +123,8 @@
         }
 
         .produto img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
-        .produto h3 { font-family: 'Playfair Display', serif; color: white; font-size: 18px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
+        .produto h3 { font-family: 'Playfair Display', serif; color: white; font-size: 18px; min-height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; }
+        .desc-curta { font-size: 12px; color: #aaa; margin-bottom: 15px; line-height: 1.4; font-weight: 300; min-height: 35px; }
         .preco { font-size: 24px; color: var(--ouro-claro); font-weight: 700; margin-bottom: 25px; }
 
         .btn-comprar {
@@ -139,7 +140,6 @@
             transition: 0.3s;
         }
 
-        /* SACOLA */
         #cart-icon { position: fixed; bottom: 30px; left: 30px; z-index: 1001; background: var(--ouro); color: black; padding: 15px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
         #side-cart { position: fixed; top: 0; right: -100%; width: 100%; max-width: 400px; height: 100%; background: #080808; z-index: 3000; transition: 0.5s; padding: 40px 20px; border-left: 1px solid var(--ouro); overflow-y: auto; }
         #side-cart.open { right: 0; }
@@ -189,8 +189,8 @@
 <div id="side-cart">
     <h2 style="font-family: 'Playfair Display', serif; color: var(--ouro); margin-bottom: 30px;">Sua Sacola</h2>
     <div id="cart-items"></div>
-    <div style="margin-top: 30px; border-top: 1px solid #222; pt-20px;">
-        <p style="display: flex; justify-content: space-between; font-size: 20px; margin-bottom: 30px; padding-top: 20px;">Total: <span id="cart-total">R$ 0,00</span></p>
+    <div style="margin-top: 30px; border-top: 1px solid #222; padding-top: 20px;">
+        <p style="display: flex; justify-content: space-between; font-size: 20px; margin-bottom: 30px;">Total: <span id="cart-total">R$ 0,00</span></p>
         <button class="btn-finalizar" onclick="checkout()">Finalizar no WhatsApp</button>
         <button class="btn-continuar" onclick="toggleCart()">Continuar Comprando</button>
     </div>
@@ -212,30 +212,35 @@
     <div class="produto">
         <img src="https://i.ibb.co/C34SThm5/IMG-4829.jpg" alt="Vibrador Realista">
         <h3>Vibrador Realista (15cm)</h3>
+        <p class="desc-curta">Textura ultra-realista para momentos inesquecíveis.</p>
         <div class="preco">R$ 79,90</div>
         <button class="btn-comprar" onclick="addItem('Vibrador Realista 15cm', 79.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/Kc9TpYvG/IMG-4785.png" alt="Pop Ball">
         <h3>Pop Ball</h3>
+        <p class="desc-curta">Explosão de prazer e sensações intensas.</p>
         <div class="preco">R$ 29,90</div>
         <button class="btn-comprar" onclick="addItem('Pop Ball', 29.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/v4YLSPrK/IMG-4762.png" alt="Vibrador Piggy">
         <h3>Vibrador Piggy</h3>
+        <p class="desc-curta">Design ergonômico e vibrações potentes.</p>
         <div class="preco">R$ 99,90</div>
         <button class="btn-comprar" onclick="addItem('Vibrador Piggy', 99.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/rGSrgkXK/IMG-4776.png" alt="Vibrador Golfinho">
         <h3>Vibrador Golfinho</h3>
+        <p class="desc-curta">Elegância e precisão para sua estimulação.</p>
         <div class="preco">R$ 39,90</div>
         <button class="btn-comprar" onclick="addItem('Vibrador Golfinho', 39.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/zWt66xbF/IMG-4763.png" alt="Sex Comfort">
         <h3>Sex Comfort</h3>
+        <p class="desc-curta">Lubrificação e conforto com toque de seda.</p>
         <div class="preco">R$ 34,90</div>
         <button class="btn-comprar" onclick="addItem('Sex Comfort', 34.90)">Eu quero</button>
     </div>
@@ -246,88 +251,145 @@
     <div class="produto">
         <img src="https://i.ibb.co/Lh8JFJKz/IMG-4800.png" alt="Brinco Luxo">
         <h3>Brinco Luxo</h3>
+        <p class="desc-curta">O brilho que completa seu visual com elegância.</p>
         <div class="preco">R$ 79,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Luxo', 79.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/zTqknvmm/IMG-4801.png" alt="Brinco Elos Luxo">
         <h3>Brinco Elos Luxo</h3>
+        <p class="desc-curta">Design contemporâneo em banho nobre.</p>
         <div class="preco">R$ 96,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Elos Luxo', 96.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/xqMbZBtn/IMG-4802.png" alt="Brinco Gota Premium">
         <h3>Brinco Gota Premium</h3>
+        <p class="desc-curta">A clássica sofisticação em formato de gota.</p>
         <div class="preco">R$ 69,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Gota Premium', 69.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/n8QyT8Px/IMG-4803.png" alt="Brinco Argola Sofisticada">
         <h3>Brinco Argola Sofisticada</h3>
+        <p class="desc-curta">Versatilidade e luxo para o dia a dia.</p>
         <div class="preco">R$ 59,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Argola Sofisticada', 59.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/wFbKjrsc/IMG-4806.png" alt="Brinco Elos Entrelaçados">
         <h3>Brinco Elos Entrelaçados</h3>
+        <p class="desc-curta">Detalhes que encantam à primeira vista.</p>
         <div class="preco">R$ 96,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Elos Entrelaçados', 96.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/Rkpjp25z/IMG-4804.png" alt="Brinco Orgânico Silver">
         <h3>Brinco Orgânico Silver</h3>
+        <p class="desc-curta">Formas naturais com acabamento impecável.</p>
         <div class="preco">R$ 59,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Orgânico Silver', 59.50)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/KxbLwbnP/IMG-4805.png" alt="Brinco Gota D'água">
         <h3>Brinco Gota D'água</h3>
+        <p class="desc-curta">Leveza e brilho em cada movimento.</p>
         <div class="preco">R$ 69,50</div>
         <button class="btn-comprar" onclick="addItem('Brinco Gota D\'água', 69.50)">Eu quero</button>
     </div>
 </div>
 
-<h2 class="section-title" id="cosmeticos">Cosméticos</h2>
+<h2 class="section-title" id="cosmeticos">Cosméticos & Cuidados</h2>
 <div class="vitrine">
+    <div class="produto">
+        <img src="https://i.ibb.co/4w2BXps6/IMG-4872.png" alt="Lip Balm Merengue">
+        <h3>Lip Balm Merengue</h3>
+        <p class="desc-curta">Hidratação profunda com um aroma irresistível.</p>
+        <div class="preco">R$ 24,90</div>
+        <button class="btn-comprar" onclick="addItem('Lip Balm Merengue', 24.90)">Eu quero</button>
+    </div>
+    <div class="produto">
+        <img src="https://i.ibb.co/ZzkQxmk8/IMG-4875.png" alt="Blush Mágico Vivai">
+        <h3>Blush Mágico Vivai</h3>
+        <p class="desc-curta">O tom perfeito que se adapta à sua pele.</p>
+        <div class="preco">R$ 39,90</div>
+        <button class="btn-comprar" onclick="addItem('Blush Mágico Vivai', 39.90)">Eu quero</button>
+    </div>
+    <div class="produto">
+        <img src="https://i.ibb.co/d4HQ1BJp/IMG-4879.png" alt="Gel Hidratante">
+        <h3>Gel Hidratante Corpo e Virilha</h3>
+        <p class="desc-curta">Cuidado delicado e refrescante (Frutas Vermelhas).</p>
+        <div class="preco">R$ 49,90</div>
+        <button class="btn-comprar" onclick="addItem('Gel Hidratante Corpo e Virilha', 49.90)">Eu quero</button>
+    </div>
+    <div class="produto">
+        <img src="https://i.ibb.co/zh7yz5n1/IMG-4878.png" alt="Sérum Facial Vit C">
+        <h3>Sérum Facial Vitamina C</h3>
+        <p class="desc-curta">Pele radiante, rejuvenescida e protegida.</p>
+        <div class="preco">R$ 29,90</div>
+        <button class="btn-comprar" onclick="addItem('Sérum Facial Vitamina C', 29.90)">Eu quero</button>
+    </div>
+    <div class="produto">
+        <img src="https://i.ibb.co/rfLMBpFy/IMG-4880.png" alt="Body Scrub Babalife">
+        <h3>Body Scrub Babalife</h3>
+        <p class="desc-curta">Esfoliação luxuosa para uma pele de seda.</p>
+        <div class="preco">R$ 29,90</div>
+        <button class="btn-comprar" onclick="addItem('Body Scrub Babalife', 29.90)">Eu quero</button>
+    </div>
+    <div class="produto">
+        <img src="https://i.ibb.co/YFSrFr2n/IMG-4877.png" alt="Esponja Alleva Beauty">
+        <h3>Esponja Alleva Beauty</h3>
+        <p class="desc-curta">Toque macio para uma aplicação impecável.</p>
+        <div class="preco">R$ 14,90</div>
+        <button class="btn-comprar" onclick="addItem('Esponja Alleva Beauty', 14.90)">Eu quero</button>
+    </div>
     <div class="produto">
         <img src="https://i.ibb.co/XxSFcbqM/IMG-4819.png" alt="Kit New Hair">
         <h3>Kit New Hair</h3>
+        <p class="desc-curta">Crescimento e fortalecimento dos fios.</p>
         <div class="preco">R$ 99,90</div>
         <button class="btn-comprar" onclick="addItem('Kit New Hair', 99.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/PZScqMZt/IMG-4820.png" alt="Kit New Hair Premium">
         <h3>Kit New Hair Premium</h3>
+        <p class="desc-curta">O cuidado completo para cabelos exigentes.</p>
         <div class="preco">R$ 99,90</div>
         <button class="btn-comprar" onclick="addItem('Kit New Hair Premium', 99.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/23LS8sNs/IMG-4821.png" alt="Kit Belkit">
         <h3>Kit Penteia Cabelo - Belkit</h3>
+        <p class="desc-curta">Desembaraço imediato e brilho intenso.</p>
         <div class="preco">R$ 99,90</div>
         <button class="btn-comprar" onclick="addItem('Kit Belkit', 99.90)">Eu quero</button>
     </div>
+    
     <div class="produto">
-        <img src="https://i.ibb.co/m5v5zf80/IMG-4822.png" alt="Kit Bio Instinto">
-        <h3>Kit Liso com Força - Bio Instinto</h3>
+        <img src="https://i.ibb.co/TD3pgdgF/IMG-4822.png" alt="Liso com Força">
+        <h3>Liso com Força - Bio Instinto</h3>
+        <p class="desc-curta">Alinhamento perfeito e força extrema para seus fios.</p>
         <div class="preco">R$ 99,90</div>
-        <button class="btn-comprar" onclick="addItem('Kit Liso Bio Instinto', 99.90)">Eu quero</button>
+        <button class="btn-comprar" onclick="addItem('Liso com Força', 99.90)">Eu quero</button>
     </div>
     <div class="produto">
-        <img src="https://i.ibb.co/CD6578T/IMG-4823.png" alt="Kit Cacheamos">
-        <h3>Kit Cacheamos - Bio Instinto</h3>
+        <img src="https://i.ibb.co/jvTF5fcL/IMG-4823.png" alt="Cacheamos">
+        <h3>Cacheamos - Bio Instinto</h3>
+        <p class="desc-curta">Definição radiante e hidratação para seus cachos.</p>
         <div class="preco">R$ 99,90</div>
-        <button class="btn-comprar" onclick="addItem('Kit Cacheamos Bio Instinto', 99.90)">Eu quero</button>
+        <button class="btn-comprar" onclick="addItem('Cacheamos', 99.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/LDSFGcPS/IMG-4824.png" alt="Sabonete Íntimo">
         <h3>Sabonete Íntimo Ba Ba Bell</h3>
+        <p class="desc-curta">Frescor e proteção com pH equilibrado.</p>
         <div class="preco">R$ 29,90</div>
         <button class="btn-comprar" onclick="addItem('Sabonete Íntimo Ba Ba Bell', 29.90)">Eu quero</button>
     </div>
     <div class="produto">
         <img src="https://i.ibb.co/BKC4dpYF/IMG-4825.png" alt="Duo Ba Ba Bell">
         <h3>Duo Hidratante e Body Splash</h3>
+        <p class="desc-curta">Fragrância envolvente que dura o dia todo.</p>
         <div class="preco">R$ 49,90</div>
         <button class="btn-comprar" onclick="addItem('Duo Ba Ba Bell', 49.90)">Eu quero</button>
     </div>
@@ -373,7 +435,6 @@
 
     function checkout() {
         if(sacola.length === 0) return alert("Sua sacola está vazia!");
-        
         let msg = "Olá T&T Story! Gostaria de fazer esse pedido:\n\n";
         let total = 0;
         sacola.forEach(i => {
@@ -381,7 +442,6 @@
             total += i.preco;
         });
         msg += `\n*Total: R$ ${total.toFixed(2).replace('.',',')}*`;
-        
         const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(msg)}`;
         window.location.href = url;
     }
