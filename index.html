@@ -9,8 +9,8 @@
         :root {
             --ouro: #d4af37;
             --ouro-claro: #f1d592;
-            --preto: #050505;
-            --card-bg: rgba(28, 28, 28, 0.8);
+            --preto-profundo: #020202;
+            --card-bg: rgba(20, 20, 20, 0.9);
         }
 
         * { box-sizing: border-box; }
@@ -18,26 +18,28 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--preto);
-            background-image: 
-                linear-gradient(30deg, #0f0f0f 12%, transparent 12.5%, transparent 87%, #0f0f0f 87.5%, #0f0f0f),
-                linear-gradient(150deg, #0f0f0f 12%, transparent 12.5%, transparent 87%, #0f0f0f 87.5%, #0f0f0f),
-                linear-gradient(60deg, #141414 25%, transparent 25.5%, transparent 75%, #141414 75%, #141414);
-            background-size: 80px 140px;
+            background-color: var(--preto-profundo);
+            
+            /* --- FUNDO PROFISSIONAL TEXTURIZADO COM ILUMINAÇÃO RADIAL --- */
+            background-image: radial-gradient(circle at center, #1a1a1a 0%, var(--preto-profundo) 70%),
+            url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAAn998bAAAAVlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAV554bAAAAnnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWRlZmdoaWprbG1ub3Bxcv//Y9EAAAM5SURBVGje7ZpLkqwgEIbFm9fD73/bXUAb40wXpWpXmcnCj58f5UfAm7Zt27Zt27Zt+6/+i2856y/R5bS/ZOfLPuW9n6L/4Vve+iv+V5+iy9v+4q6XfcpbT9E/9uVb7rX93uKud8wRff1H//Apt9p+b8itYv6Zf3wKOf98Cjn/fAo5/3wKOf9d/N6Xf9eXb7n19pvt99YxR/Tf4h+fQs4/n0LOP59Czj+fQs5/Z0T9XUfU3x8RnX+W//EUXmHnKbzCzlN4hZ2n8Ao7L6KK/reKqKLoIu9w8w4f//D74w/99O2nPn355ZdfXv74R6//fTid/unL3Xw6nf6ffvry4Z8p4Z9Sxj+lzO+UfE74Z4z6R4wY9Ucs+KcU+Ucs+KcUOf//yPpnSvxTyvxOyeeEf8aInyn+KcVv77/K7zHqHzFi1D9idOfvN3mHjz/4/fCHvvnwT3/68m97Xf/8N7mH//j49+/pX7P+NfuU1T/l+f//C4v9X1js/8Ji/4fDfrv4vbT9XpBbxXwn/48w8r+IkT/Cof/fHfrfof8d+v8L7L6vof//f8bI75P6B7R/oX39h/XvWf+Y9Y9Z/1P/H5j+Py5+Xv+e9Y9p9S+p9m9pX/9S//+X//83FP7P4XN4D4+/P9/9749/9N5Of59Of/pyd/734fznH+92/ffxf/968eO/f39+XOfv+9+48N9S/KcU/f8T//9vKPpP//83+u/if/958ef//vPiv3/+uM7fR/Xf4/v984/Xv6foX9L5K9b/96L+t+f/9+H/b//+z4t///nx8/5f/P7j+/P6Z/z8r6X8+X/+098//X18+vH8fXz+vOOfR46IPz9yxPxH7PPIf4o8+H/+x4X978X//nnhv2X4T5kP//w95P975D89f//f9yMh//9mOfz5z6fQ7+O5H+H0H+9Hof8x4n75WfjzWfy+R/+9P//xY9Sffr+Z//4HkRfyE//vY/L/Cof+Ixz6j/mPEff/N/n/9sh/+f//W//Y9Y9Z/1P/L7D//wcs9r+wWPyXFv/7u797f7//Gf4Ph//Xf/4X5p/b/w9+fv/85/f9Z+b/b5f/mP//YwA/4f8/AP//APz/A/D/A8D//wO3/wPA/z8A///8A//9B7f/A8D//wD4/wfg/wfwH//b4+OPv/Xf/wF5OfvC5+fT6T/m+Lffw///iPPXP8S+/gftX6ZfH5f/A9L/Afqf6dfH5f/m//8L/f+Fhf8AAAAASUVORK5CYII=');
+            
+            background-repeat: repeat;
+            background-size: auto, 100px 100px;
             color: white;
             margin: 0;
             overflow-x: hidden;
         }
 
-        header { background: #000; text-align: center; padding: 40px 20px 20px; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 34px; letter-spacing: 12px; color: var(--ouro); text-transform: uppercase; font-weight: 300; }
+        header { background: #000; text-align: center; padding: 40px 20px 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 34px; letter-spacing: 12px; color: var(--ouro); text-transform: uppercase; font-weight: 300; margin: 0; }
         .slogan { font-size: 9px; color: #666; letter-spacing: 4px; text-transform: uppercase; margin-top: 8px; }
 
         nav {
-            background: rgba(0, 0, 0, 0.96);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             padding: 18px 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
             position: sticky;
             top: 0;
             z-index: 2000;
@@ -53,85 +55,104 @@
             font-size: 10px; 
             text-transform: uppercase; 
             letter-spacing: 1.5px; 
-            transition: 0.4s ease; 
+            transition: all 0.4s ease; 
+            font-weight: 400;
         }
         .nav-item a:hover { color: var(--ouro); letter-spacing: 2.5px; }
 
-        .sobre-nos { padding: 80px 20px; text-align: center; }
-        .sobre-content { max-width: 800px; margin: 0 auto; }
-        .sobre-nos h2 { font-family: 'Playfair Display', serif; color: var(--ouro); font-size: 36px; margin-bottom: 25px; font-style: italic; }
-        .sobre-nos p { font-size: 16px; line-height: 1.8; color: #bbb; font-weight: 300; margin-bottom: 30px; }
+        .sobre-nos { padding: 100px 20px; text-align: center; }
+        .sobre-content { max-width: 750px; margin: 0 auto; }
+        .sobre-nos h2 { font-family: 'Playfair Display', serif; color: var(--ouro); font-size: 38px; margin-bottom: 30px; font-style: italic; font-weight: 400; }
+        .sobre-nos p { font-size: 16px; line-height: 2; color: #bbb; font-weight: 300; letter-spacing: 0.5px; }
 
         .section-title { 
             font-family: 'Playfair Display', serif; 
             text-align: center; 
             color: var(--ouro); 
-            margin: 100px 0 50px; 
-            font-size: 32px; 
+            margin: 100px 0 60px; 
+            font-size: 34px; 
             font-style: italic;
-            scroll-margin-top: 100px; 
+            scroll-margin-top: 110px; 
+            font-weight: 400;
         }
 
         .vitrine {
             max-width: 1200px;
-            margin: 0 auto 100px;
+            margin: 0 auto 120px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             padding: 0 20px;
         }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         .produto {
             background: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 8px;
             padding: 25px;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: 0.4s ease;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .produto:hover { border-color: var(--ouro); transform: translateY(-8px); }
-        .produto img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
-        .produto h3 { font-family: 'Playfair Display', serif; font-size: 18px; min-height: 45px; display: flex; align-items: center; justify-content: center; }
-        .preco { font-size: 24px; color: var(--ouro-claro); font-weight: 700; margin-bottom: 25px; }
+        .produto:hover { 
+            border-color: rgba(212, 175, 55, 0.5); 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+        }
+        .produto img { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; margin-bottom: 25px; }
+        .produto h3 { font-family: 'Playfair Display', serif; color: #fff; font-size: 19px; min-height: 50px; display: flex; align-items: center; justify-content: center; font-weight: 400; margin: 0 0 10px 0; }
+        
+        /* ADICIONADA DESCRIÇÃO PARA MELHORAR O CONTEÚDO SEM MUDAR ESTRUTURA */
+        .desc-prod { font-size: 11px; color: #777; line-height: 1.4; margin-bottom: 15px; min-height: 35px; }
+        
+        .preco { font-size: 26px; color: var(--ouro-claro); font-weight: 300; margin-bottom: 30px; letter-spacing: 1px; }
 
         .btn-comprar {
-            background: var(--ouro); color: black; padding: 15px; font-weight: 700; border-radius: 50px; text-transform: uppercase; border: none; cursor: pointer; font-size: 11px; letter-spacing: 1px; transition: 0.3s;
+            background: transparent;
+            color: var(--ouro);
+            padding: 16px;
+            font-weight: 400;
+            border-radius: 4px;
+            text-transform: uppercase;
+            border: 1px solid var(--ouro);
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.4s;
+            font-size: 11px;
+            letter-spacing: 2px;
         }
-        .btn-comprar:hover { background: var(--ouro-claro); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+        .btn-comprar:hover { 
+            background: var(--ouro); 
+            color: #000; 
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4); 
+        }
 
-        .pagamento-info { text-align: center; padding: 60px 20px; background: rgba(255,255,255,0.02); margin-top: 50px; border-top: 1px solid rgba(212, 175, 55, 0.1); }
-        .pagamento-info h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: var(--ouro); margin-bottom: 25px; }
-        .metodos { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px; }
-        .metodo-item { background: white; color: black; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-size: 10px; }
+        .pagamento-info { text-align: center; padding: 80px 20px; background: rgba(0,0,0,0.4); margin-top: 100px; border-top: 1px solid rgba(212, 175, 55, 0.1); }
+        .pagamento-info h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: var(--ouro); margin-bottom: 30px; font-weight: 400; }
+        .metodos { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+        .metodo-item { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 8px 15px; border-radius: 4px; font-weight: 300; font-size: 10px; letter-spacing: 1px; }
 
         .social-footer { 
-            text-decoration: none; 
-            color: var(--ouro); 
-            font-size: 13px; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 10px; 
-            transition: 0.3s;
-            margin-top: 20px;
+            text-decoration: none; color: #888; font-size: 12px; letter-spacing: 3px; 
+            text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.4s; font-weight: 300;
         }
-        .social-footer:hover { color: white; transform: scale(1.05); }
+        .social-footer:hover { color: var(--ouro); transform: scale(1.02); }
 
-        #cart-icon { position: fixed; bottom: 30px; left: 30px; z-index: 1001; background: var(--ouro); color: black; padding: 15px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.5); transition: 0.3s; }
+        #cart-icon { position: fixed; bottom: 30px; left: 30px; z-index: 1001; background: var(--ouro); color: black; padding: 15px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.5); transition: 0.3s; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
         .btn-whatsapp-fixo { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1001; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .btn-whatsapp-fixo:hover { transform: scale(1.1); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3); }
         
-        #side-cart { position: fixed; top: 0; right: -100%; width: 100%; max-width: 400px; height: 100%; background: #080808; z-index: 3000; transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1); padding: 40px 20px; border-left: 1px solid var(--ouro); overflow-y: auto; }
+        #side-cart { position: fixed; top: 0; right: -100%; width: 100%; max-width: 400px; height: 100%; background: #050505; z-index: 3000; transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1); padding: 50px 30px; border-left: 1px solid rgba(212, 175, 55, 0.2); overflow-y: auto; }
         #side-cart.open { right: 0; }
+        #side-cart h2 { font-family: 'Playfair Display', serif; color: var(--ouro); font-weight: 400; font-style: italic; margin-bottom: 40px; }
 
-        footer { text-align: center; padding: 40px 20px; color: #333; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        footer { text-align: center; padding: 40px 20px; color: #444; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; background: #000; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
@@ -152,57 +173,57 @@
 <section class="sobre-nos reveal">
     <div class="sobre-content">
         <h2>A Essência T&T Story</h2>
-        <p>Nascida do desejo de unir sofisticação e bem-estar, a <strong>T&T Story</strong> escolhe a dedo cada item para celebrar o poder e a intimidade de cada cliente. Nossa missão é oferecer produtos que realcem sua beleza e despertem seus sentidos.</p>
+        <p>Nascida do desejo de unir sofisticação e bem-estar, a <strong>T&T Story</strong> escolhe a dedo cada item para celebrar o poder e a intimidade de cada cliente. Nossa missão é oferecer produtos que realcem sua beleza e despertem seus sentidos através de uma curadoria exclusiva de luxo.</p>
     </div>
 </section>
 
 <h2 class="section-title reveal" id="joias">Joias</h2>
 <div class="vitrine">
-    <div class="produto reveal"><img src="https://i.ibb.co/Lh8JFJKz/IMG-4800.png"><h3>Brinco Luxo</h3><div class="preco">R$ 79,50</div><button class="btn-comprar" onclick="addItem('Brinco Luxo', 79.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/zTqknvmm/IMG-4801.png"><h3>Brinco Elos Luxo</h3><div class="preco">R$ 96,50</div><button class="btn-comprar" onclick="addItem('Brinco Elos Luxo', 96.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/xqMbZBtn/IMG-4802.png"><h3>Brinco Gota Premium</h3><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota Premium', 69.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/n8QyT8Px/IMG-4803.png"><h3>Brinco Argola</h3><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Argola', 59.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/wFbKjrsc/IMG-4806.png"><h3>Brinco Elos Entrelaçados</h3><div class="preco">R$ 96,50</div><button class="btn-comprar" onclick="addItem('Brinco Elos Entrelaçados', 96.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/Rkpjp25z/IMG-4804.png"><h3>Brinco Orgânico Silver</h3><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Orgânico Silver', 59.50)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/KxbLwbnP/IMG-4805.png"><h3>Brinco Gota D'água</h3><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota D\'água', 69.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/Lh8JFJKz/IMG-4800.png"><h3>Brinco Luxo</h3><p class="desc-prod">Banho em ouro com acabamento polido para brilho máximo.</p><div class="preco">R$ 79,50</div><button class="btn-comprar" onclick="addItem('Brinco Luxo', 79.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/zTqknvmm/IMG-4801.png"><h3>Brinco Elos Luxo</h3><p class="desc-prod">Design contemporâneo em elos entrelaçados de alta joalheria.</p><div class="preco">R$ 96,50</div><button class="btn-comprar" onclick="addItem('Brinco Elos Luxo', 96.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/xqMbZBtn/IMG-4802.png"><h3>Brinco Gota Premium</h3><p class="desc-prod">O clássico formato gota com lapidação refinada e leveza.</p><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota Premium', 69.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/n8QyT8Px/IMG-4803.png"><h3>Brinco Argola</h3><p class="desc-prod">Peça versátil e atemporal para compor qualquer visual luxuoso.</p><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Argola', 59.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/wFbKjrsc/IMG-4806.png"><h3>Brinco Elos Entrelaçados</h3><p class="desc-prod">Detalhes minuciosos que destacam a sofisticação da marca.</p><div class="preco">R$ 96,50</div><button class="btn-comprar" onclick="addItem('Brinco Elos Entrelaçados', 96.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/Rkpjp25z/IMG-4804.png"><h3>Brinco Orgânico Silver</h3><p class="desc-prod">Formas naturais com banho prateado de alto padrão.</p><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Orgânico Silver', 59.50)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/KxbLwbnP/IMG-4805.png"><h3>Brinco Gota D'água</h3><p class="desc-prod">Minimalismo e delicadeza em uma peça única e iluminada.</p><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota D\'água', 69.50)">Adicionar</button></div>
 </div>
 
 <h2 class="section-title reveal" id="maquiagem">Maquiagem</h2>
 <div class="vitrine">
-    <div class="produto reveal"><img src="https://i.ibb.co/4w2BXps6/IMG-4872.png"><h3>Lip Balm Merengue</h3><div class="preco">R$ 24,90</div><button class="btn-comprar" onclick="addItem('Lip Balm Merengue', 24.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/ZzkQxmk8/IMG-4875.png"><h3>Blush Mágico Vivai</h3><div class="preco">R$ 39,90</div><button class="btn-comprar" onclick="addItem('Blush Mágico Vivai', 39.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/zh7yz5n1/IMG-4878.png"><h3>Sérum Vitamina C</h3><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Sérum Vitamina C', 29.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/YFSrFr2n/IMG-4877.png"><h3>Esponja Alleva</h3><div class="preco">R$ 14,90</div><button class="btn-comprar" onclick="addItem('Esponja Alleva', 14.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/4w2BXps6/IMG-4872.png"><h3>Lip Balm Merengue</h3><p class="desc-prod">Hidratação profunda com toque acetinado e aroma irresistível.</p><div class="preco">R$ 24,90</div><button class="btn-comprar" onclick="addItem('Lip Balm Merengue', 24.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/ZzkQxmk8/IMG-4875.png"><h3>Blush Mágico Vivai</h3><p class="desc-prod">Pigmentação inteligente que se adapta perfeitamente ao tom da pele.</p><div class="preco">R$ 39,90</div><button class="btn-comprar" onclick="addItem('Blush Mágico Vivai', 39.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/zh7yz5n1/IMG-4878.png"><h3>Sérum Vitamina C</h3><p class="desc-prod">Ação antioxidante potente para um rosto radiante e revigorado.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Sérum Vitamina C', 29.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/YFSrFr2n/IMG-4877.png"><h3>Esponja Alleva</h3><p class="desc-prod">Textura premium para um acabamento profissional e uniforme.</p><div class="preco">R$ 14,90</div><button class="btn-comprar" onclick="addItem('Esponja Alleva', 14.90)">Adicionar</button></div>
 </div>
 
 <h2 class="section-title reveal" id="cosmeticos">Cosméticos</h2>
 <div class="vitrine">
-    <div class="produto reveal"><img src="https://i.ibb.co/rfLMBpFy/IMG-4880.png"><h3>Body Scrub Babalife</h3><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Body Scrub Babalife', 29.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/XxSFcbqM/IMG-4819.png"><h3>Kit New Hair</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit New Hair', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/PZScqMZt/IMG-4820.png"><h3>Kit New Hair Premium</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit New Hair Premium', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/23LS8sNs/IMG-4821.png"><h3>Kit Belkit Penteia</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit Belkit Penteia', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/TD3pgdgF/IMG-4822.png"><h3>Liso com Força</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Liso com Força', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/jvTF5fcL/IMG-4823.png"><h3>Kit Cacheamos</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit Cacheamos', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/LDSFGcPS/IMG-4824.png"><h3>Sabonete Íntimo</h3><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Sabonete Íntimo', 29.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/BKC4dpYF/IMG-4825.png"><h3>Duo Ba Ba Bell</h3><div class="preco">R$ 49,90</div><button class="btn-comprar" onclick="addItem('Duo Ba Ba Bell', 49.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/rfLMBpFy/IMG-4880.png"><h3>Body Scrub Babalife</h3><p class="desc-prod">Esfoliação luxuosa para uma pele sedosa e renovada.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Body Scrub Babalife', 29.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/XxSFcbqM/IMG-4819.png"><h3>Kit New Hair</h3><p class="desc-prod">Tratamento capilar completo para força e brilho intenso.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit New Hair', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/PZScqMZt/IMG-4820.png"><h3>Kit New Hair Premium</h3><p class="desc-prod">Nossa linha máxima de restauração e nutrição profunda.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit New Hair Premium', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/23LS8sNs/IMG-4821.png"><h3>Kit Belkit Penteia</h3><p class="desc-prod">Desembaraço perfeito com proteção da fibra capilar.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit Belkit Penteia', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/TD3pgdgF/IMG-4822.png"><h3>Liso com Força</h3><p class="desc-prod">Alinhamento impecável e controle de frizz duradouro.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Liso com Força', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/jvTF5fcL/IMG-4823.png"><h3>Kit Cacheamos</h3><p class="desc-prod">Definição máxima e hidratação para cachos poderosos.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Kit Cacheamos', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/LDSFGcPS/IMG-4824.png"><h3>Sabonete Íntimo</h3><p class="desc-prod">Cuidado delicado e proteção com fragrância suave.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Sabonete Íntimo', 29.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/BKC4dpYF/IMG-4825.png"><h3>Duo Ba Ba Bell</h3><p class="desc-prod">O combo essencial para sua rotina diária de beleza.</p><div class="preco">R$ 49,90</div><button class="btn-comprar" onclick="addItem('Duo Ba Ba Bell', 49.90)">Adicionar</button></div>
 </div>
 
 <h2 class="section-title reveal" id="lingerie">Lingerie</h2>
 <div class="vitrine">
-    <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--ouro);">
-        <p style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--ouro-claro); font-style: italic;">Coleção exclusiva chegando em breve.</p>
+    <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed var(--ouro);">
+        <p style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--ouro-claro); font-style: italic;">Coleção escolhida a dedo chegando em breve.</p>
         <p style="color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Fique atenta às novidades.</p>
     </div>
 </div>
 
 <h2 class="section-title reveal" id="sexshop">Sex Shop</h2>
 <div class="vitrine">
-    <div class="produto reveal"><img src="https://i.ibb.co/C34SThm5/IMG-4829.jpg"><h3>Vibrador Realista</h3><div class="preco">R$ 79,90</div><button class="btn-comprar" onclick="addItem('Vibrador Realista', 79.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/Kc9TpYvG/IMG-4785.png"><h3>Pop Ball</h3><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Pop Ball', 29.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/v4YLSPrK/IMG-4762.png"><h3>Vibrador Piggy</h3><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Vibrador Piggy', 99.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/rGSrgkXK/IMG-4776.png"><h3>Vibrador Golfinho</h3><div class="preco">R$ 39,90</div><button class="btn-comprar" onclick="addItem('Vibrador Golfinho', 39.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/zWt66xbF/IMG-4763.png"><h3>Sex Comfort</h3><div class="preco">R$ 34,90</div><button class="btn-comprar" onclick="addItem('Sex Comfort', 34.90)">Adicionar</button></div>
-    <div class="produto reveal"><img src="https://i.ibb.co/d4HQ1BJp/IMG-4879.png"><h3>Gel Hidratante</h3><div class="preco">R$ 49,90</div><button class="btn-comprar" onclick="addItem('Gel Hidratante', 49.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/C34SThm5/IMG-4829.jpg"><h3>Vibrador Realista</h3><p class="desc-prod">Silicone soft-touch para uma experiência natural e prazerosa.</p><div class="preco">R$ 79,90</div><button class="btn-comprar" onclick="addItem('Vibrador Realista', 79.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/Kc9TpYvG/IMG-4785.png"><h3>Pop Ball</h3><p class="desc-prod">Sensações explosivas para momentos inesquecíveis.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Pop Ball', 29.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/v4YLSPrK/IMG-4762.png"><h3>Vibrador Piggy</h3><p class="desc-prod">Design discreto e potência surpreendente para seu prazer.</p><div class="preco">R$ 99,90</div><button class="btn-comprar" onclick="addItem('Vibrador Piggy', 99.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/rGSrgkXK/IMG-4776.png"><h3>Vibrador Golfinho</h3><p class="desc-prod">Estimulação precisa com ergonometria focada no bem-estar.</p><div class="preco">R$ 39,90</div><button class="btn-comprar" onclick="addItem('Vibrador Golfinho', 39.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/zWt66xbF/IMG-4763.png"><h3>Sex Comfort</h3><p class="desc-prod">O auxiliar perfeito para uma intimidade segura e relaxada.</p><div class="preco">R$ 34,90</div><button class="btn-comprar" onclick="addItem('Sex Comfort', 34.90)">Adicionar</button></div>
+    <div class="produto reveal"><img src="https://i.ibb.co/d4HQ1BJp/IMG-4879.png"><h3>Gel Hidratante</h3><p class="desc-prod">Textura leve e hidratação profunda para momentos íntimos.</p><div class="preco">R$ 49,90</div><button class="btn-comprar" onclick="addItem('Gel Hidratante', 49.90)">Adicionar</button></div>
 </div>
 
 <div class="pagamento-info reveal">
@@ -213,37 +234,33 @@
         <div class="metodo-item">CRÉDITO</div>
         <div class="metodo-item">BOLETO</div>
     </div>
-    <a href="https://www.instagram.com/thalya_tcharlyson_story?igsh=Z3lzMXMwc2tmeWpo" target="_blank" class="social-footer reveal">
+    <a href="https://www.instagram.com/thalya_tcharlyson_story?igsh=Z3lzMXMwc2tmeWpo" target="_blank" class="social-footer">
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         @thalya_tcharlyson_story
     </a>
 </div>
 
 <div id="cart-icon" onclick="toggleCart()">🛒 Sacola (<span id="cart-count">0</span>)</div>
-
 <div id="side-cart">
-    <h2 style="font-family: 'Playfair Display', serif; color: var(--ouro); margin-bottom: 30px;">Sua Sacola</h2>
+    <h2>Sua Sacola</h2>
     <div id="cart-items"></div>
     <div style="margin-top: 30px; border-top: 1px solid #222; padding-top: 20px;">
-        <p style="font-size: 20px;">Total: <span id="cart-total">R$ 0,00</span></p>
-        <button style="background:#25d366; color:white; width:100%; padding:18px; border:none; border-radius:50px; font-weight:bold; cursor:pointer; text-transform:uppercase; margin-top:20px;" onclick="checkout()">Finalizar no WhatsApp</button>
-        <button style="background:none; border:none; color:#555; width:100%; margin-top:15px; cursor:pointer; text-transform:uppercase; font-size:10px;" onclick="toggleCart()">Continuar comprando</button>
+        <p style="font-size: 20px; font-weight: 300; color: #fff;">Total: <span id="cart-total" style="color: var(--ouro-claro);">R$ 0,00</span></p>
+        <button style="background:#25d366; color:white; width:100%; padding:18px; border:none; border-radius:4px; font-weight:bold; cursor:pointer; text-transform:uppercase; margin-top:20px; letter-spacing:1px; transition: 0.3s;" onclick="checkout()">Finalizar no WhatsApp</button>
+        <button style="background:none; border:none; color:#555; width:100%; margin-top:15px; cursor:pointer; text-transform:uppercase; font-size:10px; letter-spacing:1px;" onclick="toggleCart()">Continuar comprando</button>
     </div>
 </div>
 
-<div class="btn-whatsapp-fixo" onclick="checkout()">
-    <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.013c.101.007.237-.029.37.29s.454 1.101.494 1.181c.04.08.067.173.014.281-.054.107-.08.173-.16.267-.08.093-.168.207-.24.288-.087.094-.179.196-.076.372.103.176.459.757.985 1.226.677.604 1.248.791 1.428.87.18.079.285.066.391-.053.107-.12.454-.528.575-.708.12-.18.24-.151.405-.09.166.06.31.258.468.337.159.079.317.158.375.258s.058.446-.086.851z"/></svg>
-</div>
-
-<footer>&copy; 2026 T&T Story - Todos os direitos reservados</footer>
+<footer>&copy; 2026 T&T Story - Tcharlyson Barbosa. Todos os direitos reservados</footer>
 
 <script>
+    // --- Lógica de Scroll Reveal ---
     function reveal() {
         var reveals = document.querySelectorAll(".reveal");
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
+            var elementVisible = 100;
             if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
             }
@@ -252,6 +269,7 @@
     window.addEventListener("scroll", reveal);
     reveal();
 
+    // --- Lógica da Sacola ---
     let sacola = [];
     function toggleCart() { document.getElementById('side-cart').classList.toggle('open'); }
     function addItem(nome, preco) {
@@ -270,9 +288,9 @@
         sacola.forEach((i, index) => {
             total += i.preco;
             itensCont.innerHTML += `
-                <div style="display:flex; justify-content:space-between; margin-bottom:15px; font-size:14px; border-bottom:1px solid #111; padding-bottom:5px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:15px; font-size:14px; border-bottom:1px solid #111; padding-bottom:5px; color: #eee; font-weight: 300;">
                     <span>${i.nome}</span>
-                    <span>R$ ${i.preco.toFixed(2).replace('.',',')} <button onclick="removeItem(${index})" style="background:none; border:none; color:red; cursor:pointer; margin-left:10px;">&times;</button></span>
+                    <span style="color: var(--ouro-claro);">R$ ${i.preco.toFixed(2).replace('.',',')} <button onclick="removeItem(${index})" style="background:none; border:none; color:#777; cursor:pointer; margin-left:10px; font-size: 16px;">&times;</button></span>
                 </div>`;
         });
         document.getElementById('cart-total').innerText = `R$ ${total.toFixed(2).replace('.',',')}`;
@@ -282,7 +300,7 @@
     function checkout() {
         let msg = "";
         if(sacola.length === 0) {
-            msg = "Olá, T&T Story! Vi o site e gostaria de conhecer melhor os produtos.";
+            msg = "Olá, T&T Story! Vi o site e gostaria de conhecer melhor os produtos e tirar algumas dúvidas. Pode me ajudar?";
         } else {
             msg = "Olá T&T Story! Gostaria de encomendar estes produtos:\n\n";
             sacola.forEach(i => msg += `• ${i.nome} (R$ ${i.preco.toFixed(2).replace('.',',')})\n`);
