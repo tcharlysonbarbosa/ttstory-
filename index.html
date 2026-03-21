@@ -29,6 +29,19 @@
             overflow-x: hidden;
         }
 
+        /* Barra de Frete Minimalista */
+        .frete-barra {
+            background-color: #000;
+            color: var(--ouro);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            font-weight: 400;
+        }
+
         header { background: #000; text-align: center; padding: 40px 20px 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
         .logo { font-family: 'Playfair Display', serif; font-size: 34px; letter-spacing: 12px; color: var(--ouro); text-transform: uppercase; font-weight: 300; margin: 0; }
         .slogan { font-size: 9px; color: #666; letter-spacing: 4px; text-transform: uppercase; margin-top: 8px; }
@@ -125,6 +138,16 @@
         }
         .btn-insta:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(225, 48, 108, 0.5); }
 
+        /* Estilo Botão WhatsApp Flutuante */
+        .btn-wpp-flutuante {
+            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 30px; box-shadow: 1px 1px 15px rgba(0,0,0,0.4); z-index: 2500;
+            display: flex; align-items: center; justify-content: center; text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .btn-wpp-flutuante:hover { transform: scale(1.1); }
+
         #cart-icon { position: fixed; bottom: 30px; left: 30px; z-index: 1001; background: var(--ouro); color: black; padding: 15px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 12px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
         #side-cart { position: fixed; top: 0; right: -100%; width: 100%; max-width: 400px; height: 100%; background: #050505; z-index: 3000; transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1); padding: 50px 30px; border-left: 1px solid rgba(212, 175, 55, 0.2); overflow-y: auto; }
         #side-cart.open { right: 0; }
@@ -134,6 +157,10 @@
     </style>
 </head>
 <body>
+
+<div class="frete-barra">
+    ✨ Entregamos para todo o Brasil • Pagamento via PIX ✨
+</div>
 
 <header>
     <div class="logo">T&T Story</div>
@@ -146,6 +173,7 @@
     <div class="nav-item"><a onclick="showSection('maquiagem')">Maquiagem</a></div>
     <div class="nav-item"><a onclick="showSection('cosmeticos')">Cosméticos</a></div>
     <div class="nav-item"><a onclick="showSection('lingerie')">Lingerie</a></div>
+    <div class="nav-item"><a onclick="showSection('fantasias')">Fantasias</a></div>
     <div class="nav-item"><a onclick="showSection('sexshop')">Sex Shop</a></div>
 </nav>
 
@@ -157,40 +185,10 @@
         </div>
     </section>
 
-    <h2 class="section-title">Lançamentos Exclusive</h2>
-    <div class="vitrine">
-        <div class="produto reveal">
-            <img src="https://i.ibb.co/WWkNGw4X/ada28fa9-803c-4efa-ac45-d1f1c9d90949.jpg">
-            <h3>Conjunto Renda Luxo I</h3>
-            <p class="desc-prod">A joia da nossa coleção: sofisticação e poder em renda premium.</p>
-            <div class="selecao-tamanho">
-                <select id="size-home-luxo-1">
-                    <option value="P">P</option><option value="M">M</option><option value="G">G</option><option value="GG">GG</option>
-                </select>
-            </div>
-            <div class="preco">R$ 139,90</div>
-            <button class="btn-comprar" onclick="addItem('Conjunto Renda Luxo I', 139.90, 'size-home-luxo-1')">Adicionar</button>
-        </div>
-
-        <div class="produto reveal">
-            <img src="https://i.ibb.co/MDypxHH0/file-1774064026045.png">
-            <h3>Tesão de Vaca</h3>
-            <p class="desc-prod">Desperte desejos profundos com o afrodisíaco mais desejado.</p>
-            <div class="preco">R$ 24,90</div>
-            <button class="btn-comprar" onclick="addItem('Tesão de Vaca', 24.90)">Adicionar</button>
-        </div>
-
-        <div class="produto reveal">
-            <img src="https://i.ibb.co/p6hSTR53/file-1774063831731.png">
-            <h3>Tesão de Touro</h3>
-            <p class="desc-prod">Potencialize sua energia e instintos com máxima intensidade.</p>
-            <div class="preco">R$ 24,90</div>
-            <button class="btn-comprar" onclick="addItem('Tesão de Touro', 24.90)">Adicionar</button>
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-bottom: 60px;">
-        <button class="btn-comprar" style="width: auto; padding: 15px 40px;" onclick="showSection('lingerie')">Ver Coleção Completa</button>
+    <div style="text-align: center; margin-bottom: 100px;">
+        <h2 class="section-title">Explore Nossas Coleções</h2>
+        <p style="color: #666; font-size: 14px; margin-bottom: 40px;">Selecione uma categoria acima para conferir nossos produtos exclusivos.</p>
+        <button class="btn-comprar" style="width: auto; padding: 15px 40px;" onclick="showSection('lingerie')">Ver Lingeries</button>
     </div>
 </div>
 
@@ -204,7 +202,7 @@
         <div class="produto reveal"><img src="https://i.ibb.co/n8QyT8Px/IMG-4803.png"><h3>Brinco Argola</h3><p class="desc-prod">A versatilidade da argola com o toque de luxo da T&T Story.</p><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Argola', 59.50)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/wFbKjrsc/IMG-4806.png"><h3>Brinco Elos Entrelaçados</h3><p class="desc-prod">Uma obra de arte em joalheria para momentos inesquecíveis.</p><div class="preco">R$ 96,50</div><button class="btn-comprar" onclick="addItem('Brinco Elos Entrelaçados', 96.50)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/Rkpjp25z/IMG-4804.png"><h3>Brinco Orgânico Silver</h3><p class="desc-prod">Formas fluidas e banho de prata para um visual moderno e chic.</p><div class="preco">R$ 59,50</div><button class="btn-comprar" onclick="addItem('Brinco Orgânico Silver', 59.50)">Adicionar</button></div>
-        <div class="produto reveal"><img src="https://i.ibb.co/KxbLwbnP/IMG-4805.png"><h3>Brinco Gota D'água</h3><p class="desc-prod">Simplicidade e brilho em uma peça que exala feminilidade.</p><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota D\'água', 69.50)">Adicionar</button></div>
+        <div class="produto reveal"><img src="https://i.ibb.co/KxbLwbnP/IMG-4805.png"><h3>Brinco Gota D'água</h3><p class="desc-prod">Simplicidade ebrilho em uma peça que exala feminilidade.</p><div class="preco">R$ 69,50</div><button class="btn-comprar" onclick="addItem('Brinco Gota D\'água', 69.50)">Adicionar</button></div>
     </div>
 </div>
 
@@ -347,6 +345,145 @@
     </div>
 </div>
 
+<div id="fantasias" class="page-content">
+    <h2 class="section-title">Fantasias Luxo</h2>
+    <div class="vitrine">
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/VYWKNkB4/8ad06dd6-9583-423a-aefe-ad2de0bab69b.jpg">
+            <h3>Fantasia Sex Luxo I</h3>
+            <p class="desc-prod">Sedução e detalhes exclusivos para momentos inesquecíveis.</p>
+            <div class="selecao-tamanho"><select id="fan-1"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo I', 159.90, 'fan-1')">Adicionar</button>
+        </div>
+        
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/XfgnDFqK/6416dfe8-50d5-4b9c-801a-caeb2087500e.jpg">
+            <h3>Fantasia Sex Luxo II</h3>
+            <p class="desc-prod">Design luxuoso que une sofisticação e provocação.</p>
+            <div class="selecao-tamanho"><select id="fan-2"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo II', 159.90, 'fan-2')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/DBCKqMQ/3927ac11-2617-4113-8d53-7997015de0e7.jpg">
+            <h3>Fantasia Sex Luxo III</h3>
+            <p class="desc-prod">A união máxima entre a delicadeza do tule e o poder da renda.</p>
+            <div class="selecao-tamanho"><select id="fan-3"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo III', 159.90, 'fan-3')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/LzYxKpgK/741ce5ac-88b1-43ee-92f3-8920cc15fc04.jpg">
+            <h3>Fantasia Sex Luxo IV</h3>
+            <p class="desc-prod">Sedução em cada detalhe com um toque de mistério.</p>
+            <div class="selecao-tamanho"><select id="fan-4"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo IV', 159.90, 'fan-4')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/SwQCzW3V/0f920cad-37cf-47f8-b8fa-13b0008203c2.jpg">
+            <h3>Fantasia Sex Luxo V</h3>
+            <p class="desc-prod">Design exclusivo que une o poder da renda ao brilho do luxo.</p>
+            <div class="selecao-tamanho"><select id="fan-5"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo V', 159.90, 'fan-5')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/bgRc6qDZ/afa8b0b7-5e2e-4186-8a0a-c8e5bdeccdd6.jpg">
+            <h3>Fantasia Sex Luxo VI</h3>
+            <p class="desc-prod">Peça definitiva para momentos que exigem elegância e ousadia.</p>
+            <div class="selecao-tamanho"><select id="fan-6"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo VI', 159.90, 'fan-6')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/KxpX6YyG/0d90f705-27d8-41e1-b584-b621377bd6a2.jpg">
+            <h3>Fantasia Sex Luxo VII</h3>
+            <p class="desc-prod">Transparência e renda em um corte que valoriza a silhueta.</p>
+            <div class="selecao-tamanho"><select id="fan-7"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo VII', 159.90, 'fan-7')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/dsrWBGCX/a24ed877-d19e-4b79-8682-77645907159e.jpg">
+            <h3>Fantasia Sex Luxo VIII</h3>
+            <p class="desc-prod">Detalhes manuais e acabamento premium para noites inesquecíveis.</p>
+            <div class="selecao-tamanho"><select id="fan-8"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo VIII', 159.90, 'fan-8')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/fG2mxcm3/37a621a4-10d8-48ac-b64d-e4b1d5f6409c.jpg">
+            <h3>Fantasia Sex Luxo IX</h3>
+            <p class="desc-prod">O ápice do luxo íntimo: design contemporâneo e sensualidade.</p>
+            <div class="selecao-tamanho"><select id="fan-9"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo IX', 159.90, 'fan-9')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/LHcbmjf/67bb1f74-6e54-4704-8e54-ac0e9fd53aa9.jpg">
+            <h3>Fantasia Sex Luxo X</h3>
+            <p class="desc-prod">A harmonia perfeita entre rendas delicadas e um design arrebatador.</p>
+            <div class="selecao-tamanho"><select id="fan-10"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo X', 159.90, 'fan-10')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/qMc2KPtX/2adc4ca2-9fe0-47ac-bfd4-646a337e2441.jpg">
+            <h3>Fantasia Sex Luxo XI</h3>
+            <p class="desc-prod">Sofisticação e poder em uma peça desenvolvida para realçar suas curvas.</p>
+            <div class="selecao-tamanho"><select id="fan-11"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo XI', 159.90, 'fan-11')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/B2Pnct5h/3a405842-3449-4139-a50d-b7dcbaad060a.jpg">
+            <h3>Fantasia Sex Luxo XII</h3>
+            <p class="desc-prod">O luxo da transparência aliado ao conforto de um acabamento impecável.</p>
+            <div class="selecao-tamanho"><select id="fan-12"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo XII', 159.90, 'fan-12')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/pvvYL6Mr/ab4a9066-cc1b-44a9-bebb-ac752ac3afc4.jpg">
+            <h3>Fantasia Sex Luxo XIII</h3>
+            <p class="desc-prod">Sedução clássica com detalhes modernos que exalam elegância.</p>
+            <div class="selecao-tamanho"><select id="fan-13"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo XIII', 159.90, 'fan-13')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/3mgVQKZF/c0c2ab0f-3d00-47b9-b7c1-f7329942a441.jpg">
+            <h3>Fantasia Sex Luxo XIV</h3>
+            <p class="desc-prod">Uma obra-prima em lingerie para momentos de puro glamour e intimidade.</p>
+            <div class="selecao-tamanho"><select id="fan-14"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo XIV', 159.90, 'fan-14')">Adicionar</button>
+        </div>
+
+        <div class="produto reveal">
+            <img src="https://i.ibb.co/RkzdS3DW/60b0aef0-f64d-4cc5-a7ec-19ff1efb0935.jpg">
+            <h3>Fantasia Sex Luxo XV</h3>
+            <p class="desc-prod">Design exclusivo T&T Story: onde a ousadia encontra o luxo absoluto.</p>
+            <div class="selecao-tamanho"><select id="fan-15"><option>P</option><option>M</option><option>G</option><option>GG</option></select></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn-comprar" onclick="addItem('Fantasia Sex Luxo XV', 159.90, 'fan-15')">Adicionar</button>
+        </div>
+    </div>
+</div>
 
 <div id="sexshop" class="page-content">
     <h2 class="section-title">Sex Shop</h2>
@@ -366,24 +503,11 @@
         <div class="produto reveal"><img src="https://i.ibb.co/JM4xNMd/a23cecdf-864f-4cd0-a227-2008c35d426c.jpg"><h3>Kit Dominatrix</h3><p class="desc-prod">Para quem deseja explorar o poder da sedução e o fetiche.</p><div class="preco">R$ 69,90</div><button class="btn-comprar" onclick="addItem('Kit Dominatrix', 69.90)">Adicionar</button></div>
 
         <div class="sub-section-title"><h4>Cuidados & Sensações</h4></div>
-<div class="produto reveal">
-    <img src="https://i.ibb.co/MDypxHH0/file-1774064026045.png">
-    <h3>Tesão de Vaca</h3>
-    <p class="desc-prod">O afrodisíaco mais famoso para despertar desejos profundos e intensos.</p>
-    <div class="preco">R$ 24,90</div>
-    <button class="btn-comprar" onclick="addItem('Tesão de Vaca', 24.90)">Adicionar</button>
-</div>
-<div class="produto reveal">
-    <img src="https://i.ibb.co/p6hSTR53/file-1774063831731.png">
-    <h3>Tesão de Touro</h3>
-    <p class="desc-prod">Potencialize sua energia e desperte instintos intensos com este clássico afrodisíaco.</p>
-    <div class="preco">R$ 24,90</div>
-    <button class="btn-comprar" onclick="addItem('Tesão de Touro', 24.90)">Adicionar</button>
-</div>
-
+        <div class="produto reveal"><img src="https://i.ibb.co/MDypxHH0/file-1774064026045.png"><h3>Tesão de Vaca</h3><p class="desc-prod">O afrodisíaco mais famoso para despertar desejos profundos e intensos.</p><div class="preco">R$ 24,90</div><button class="btn-comprar" onclick="addItem('Tesão de Vaca', 24.90)">Adicionar</button></div>
+        <div class="produto reveal"><img src="https://i.ibb.co/p6hSTR53/file-1774063831731.png"><h3>Tesão de Touro</h3><p class="desc-prod">Potencialize sua energia e desperte instintos intensos.</p><div class="preco">R$ 24,90</div><button class="btn-comprar" onclick="addItem('Tesão de Touro', 24.90)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/Kc9TpYvG/IMG-4785.png"><h3>Pop Ball</h3><p class="desc-prod">Pequenas esferas que causam uma explosão de prazer no contato.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Pop Ball', 29.90)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/dsNg0nMK/IMG-4942.png"><h3>Goze+</h3><p class="desc-prod">Intensificador de orgasmo para mulheres que buscam o ápice.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Goze+', 29.90)">Adicionar</button></div>
-        <div class="produto reveal"><img src="https://i.ibb.co/zWt66xbF/IMG-4763.png"><h3>Sex Comfort</h3><p class="desc-prod">Auxiliar para uma penetração relaxada, segura e muito mais fluida.</p><div class="preco">R$ 34,90</div><button class="btn-comprar" onclick="addItem('Sex Comfort', 34.90)">Adicionar</button></div>
+        <div class="produto reveal"><img src="https://i.ibb.co/zWt66xbF/IMG-4763.png"><h3>Sex Comfort</h3><p class="desc-prod">Auxiliar para uma penetração relaxada e segura.</p><div class="preco">R$ 34,90</div><button class="btn-comprar" onclick="addItem('Sex Comfort', 34.90)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/d4HQ1BJp/IMG-4879.png"><h3>Gel Hidratante</h3><p class="desc-prod">Cuidado íntimo diário com hidratação de alto padrão.</p><div class="preco">R$ 49,90</div><button class="btn-comprar" onclick="addItem('Gel Hidratante', 49.90)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/KxpYG86q/IMG-4944.png"><h3>Sedenta Safada</h3><p class="desc-prod">Excitante vibrante para deixar seus sentidos à flor da pele.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('Sedenta Safada', 29.90)">Adicionar</button></div>
         <div class="produto reveal"><img src="https://i.ibb.co/wN4mXKPT/IMG-4940.png"><h3>La Cradinha</h3><p class="desc-prod">Gel adstringente feminino que proporciona sensação de estreitamento.</p><div class="preco">R$ 29,90</div><button class="btn-comprar" onclick="addItem('La Cradinha', 29.90)">Adicionar</button></div>
@@ -414,6 +538,12 @@
     </div>
 </div>
 
+<a href="https://wa.me/5548984351929?text=Olá!%20Estava%20navegando%20no%20site%20da%20T%26T%20Story%20e%20adorei%20os%20produtos.%20Gostaria%20de%20tirar%20algumas%20dúvidas,%20vocês%20podem%20me%20ajudar?" class="btn-wpp-flutuante" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+
 <div id="cart-icon" onclick="toggleCart()">🛒 Sacola (<span id="cart-count">0</span>)</div>
 <div id="side-cart">
     <h2>Sua Sacola</h2>
@@ -432,7 +562,8 @@
         document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         document.querySelectorAll('.nav-item a').forEach(a => a.classList.remove('active-link'));
-        event.currentTarget.classList.add('active-link');
+        const activeLink = Array.from(document.querySelectorAll('.nav-item a')).find(a => a.getAttribute('onclick').includes(id));
+        if(activeLink) activeLink.classList.add('active-link');
         window.scrollTo(0, 0);
         setTimeout(reveal, 100);
     }
